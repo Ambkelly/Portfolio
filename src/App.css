@@ -1,0 +1,109 @@
+@font-face {
+  font-family: 'Popins';
+  font-style: bold;
+  src: url(./assets/Fonts/Poppins-Bold.ttf);
+}
+@font-face {
+  font-family: 'text';
+  src: url(./assets/Fonts/Lato-Regular.ttf);
+}
+:root {
+  --primary-color: #E8F5FA;
+  --secondary-color: #5FBAFF;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 1px solid red;
+}
+body{
+  height: fit-content;
+  overflow-x: hidden;
+  background: linear-gradient(#000000 0%, #150050 100%);
+  animation: bgChange 10s infinite alternate ease-in-out; /* 👈 Animation Applied */
+}
+p, span, input, label,button {
+  font-family: 'text';
+  font-size: 1.5rem;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Popins';
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+/* 🔥 Keyframes for Background Animation 🔥 */
+@keyframes bgChange {
+  0%, 50% { background: linear-gradient(#000000 0%, #150050 100%); } 
+  100% { background: linear-gradient(#150050 0%, #000000 100%); }
+}
+.logo img {
+  width: 20%;
+  max-width: 100px;
+}
+
+.intro_container h1 {
+  font-size: 220px;
+  color: #444257;
+}
+.span_color {
+  color: var(--secondary-color);
+}
+.profile_image img{
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  border: 5px solid rgba(255, 255, 255, 0.1);
+}
+.profile_description{
+  max-width: 500px;
+}
+.Project_section .profile_image{
+  background-color: #3D345B;
+  padding: 20px;
+  border-radius: 20px;
+}
+.links{
+  background: linear-gradient(#000000 0%, #150050 100%);
+  cursor: pointer;
+}
+form{
+  background-color: #3D345B;
+}
+.button{
+  background: linear-gradient(#000000 0%, #150050 100%);
+  cursor: pointer;
+}
+.socials{
+  cursor: pointer;
+}
+footer{
+  background-color: #3D345B;
+  padding: 20px;
+
+}
+/* Responsive Design */
+@media (max-width: 1023px) {
+  .intro_container h1 {
+    font-size: 150px;
+  }
+}
+@media (max-width: 767px) {
+  .intro_container h1 {
+    font-size: 80px;
+  }
+  .text-4xl {
+    font-size: 24px;
+  }
+  .responsive-span {
+    font-size: 20px;
+  }
+  .intro_container {
+    flex-direction: column;
+    text-align: center;
+  }
+}
