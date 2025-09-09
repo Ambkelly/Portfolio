@@ -29,10 +29,18 @@ const Form = () => {
           <div className="w-full md:w-[49%] flex flex-col justify-center items-center">
             <h1 className="text-3xl md:text-4xl mb-6 md:mb-10 text-center">Socials</h1>
             <div className='flex flex-wrap items-center justify-center gap-4 md:gap-6 w-full'>
-              <img src="facebook-circled.gif" alt="facebook" className="w-10 md:w-12 rounded-full" />
-              <img src="linkedin-circled.gif" alt="linkedin" className="w-10 md:w-12 rounded-full" />
-              <img src="gmail-logo.gif" alt="gmail" className="w-10 md:w-12 rounded-full" />
-              <img src="github-logo.gif" alt="Github" className="w-10 md:w-12 rounded-full" />
+              <a href="https://www.facebook.com/share/1Fpc3y1oHB/" target="_blank" rel="noopener noreferrer">
+                <img src="facebook-circled.gif" alt="Facebook" className="w-10 md:w-12 rounded-full" onError={(e) => (e.target.src = '/fallback.PNG')} />
+              </a>
+              <a href="https://www.linkedin.com/in/ambkelly" target="_blank" rel="noopener noreferrer">
+                <img src="linkedin-circled.gif" alt="LinkedIn" className="w-10 md:w-12 rounded-full" onError={(e) => (e.target.src = '/fallback.PNG')} />
+              </a>
+              <a href="mailto:amb.kelly4@gmail.com">
+                <img src="gmail-logo.gif" alt="Gmail" className="w-10 md:w-12 rounded-full" onError={(e) => (e.target.src = '/fallback.PNG')} />
+              </a>
+              <a href="https://github.com/Ambkelly" target="_blank" rel="noopener noreferrer">
+                <img src="github-logo.gif" alt="GitHub" className="w-10 md:w-12 rounded-full" onError={(e) => (e.target.src = '/fallback.PNG')} />
+              </a>
             </div>
           </div>
         </div>
